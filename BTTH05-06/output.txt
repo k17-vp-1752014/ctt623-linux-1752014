@@ -1,0 +1,8 @@
+Length : 2
+
+Even numbers : 4
+Odd numbers: 123
+Max: 123
+Min: 4
+Enter position needing found: 
+Invalid input
