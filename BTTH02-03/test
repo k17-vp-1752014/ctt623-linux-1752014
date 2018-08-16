@@ -1,0 +1,69 @@
+#! /bin/bash	
+# ================================================
+echo -n "Enter a direction : "
+
+read file
+while ! test -d $file
+do
+	echo "Non-exist file. Please re-enter : "; 
+	read file
+done
+cat $file
+cd $file
+echo "Do you want to delete the file? [y/n] : "; 
+read answer
+if [ $answer == "y" ]
+then
+	rm -r * $file
+else
+	echo "File remained"
+fi
+cd ..
+mkdir BTTL
+mkdir BTTH
+echo "File BTTH & BTTL has been created."
+cd BTTL
+mkdir BTTL{1,2,3,4,5,6,7,8,9}
+echo "Making file completed."
+touch BTTL{1,2,3,4,5,6,7,8,9}/1752035.sh
+chmod ugo+x BTTL{1,2,3,4,5,6,7,8,9}/1752014.sh
+cd ..
+k=1
+while [ $k -le 9 ]
+do
+	for d in BTTL; do
+	echo "# ===========================================
+# Ho va ten : Dau Phuc Duc# MSSV : 1752014
+# Ma bai tap : BTTH03
+# =========================================
+#" > BTTL/BTTL$k/1752014.sh
+	((k++))
+	done
+done
+
+
+cd BTTH
+mkdir BTTH{1,2,3,4,5,6,7,8,9}
+echo "Making file completed."
+touch BTTH{1,2,3,4,5,6,7,8,9}/1752014.sh
+chmod ugo+x BTTH{1,2,3,4,5,6,7,8,9}/1752014.sh
+cd ..
+l=1
+while [ $l -le 9 ]
+do 	
+	for d in BTTH; do
+	echo "# ============================================
+# Ho va ten : Dau Phuc Duc
+# MSSV : 1752014# Ma bai tap :   BTTH03
+# ==========================================
+#" > BTTH/BTTH$l/1752014.sh
+	((l++))
+	done
+done
+cd BTTH
+ls BTTH[1-9]
+ls -l BTTH[1-9]/1752014.sh
+cd ..
+cd BTTL
+ls BTTL[1-9]
+ls -l BTTL[1-9]/1752014.sh
